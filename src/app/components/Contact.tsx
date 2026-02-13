@@ -14,7 +14,7 @@ export default function Contact() {
         </p>
 
         <a
-          href="mailto:will@bertramenterpises.com"
+          href="mailto:will@bertramenterprises.org"
           className="inline-flex items-center gap-3 px-8 py-4 bg-[#3b82f6] hover:bg-[#2563eb] text-white font-medium rounded-lg transition-colors text-lg"
         >
           <svg
@@ -30,15 +30,15 @@ export default function Contact() {
               d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
             />
           </svg>
-          will@bertramenterpises.com
+          will@bertramenterprises.org
         </a>
 
         <div className="mt-16 grid sm:grid-cols-3 gap-8">
           {[
             {
               label: "Email",
-              value: "will@bertramenterpises.com",
-              href: "mailto:will@bertramenterpises.com",
+              value: "will@bertramenterprises.org",
+              href: "mailto:will@bertramenterprises.org",
             },
             {
               label: "Location",

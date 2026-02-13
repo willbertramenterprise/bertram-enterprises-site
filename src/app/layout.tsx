@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Bertram Enterprises | Technology Consulting & Engineering",
     description:
       "Software engineering, AI & automation, and technology consulting. We build intelligent systems and deliver results.",
-    url: "https://bertramenterpises.com",
+    url: "https://bertramenterprises.org",
     siteName: "Bertram Enterprises",
     type: "website",
   },
