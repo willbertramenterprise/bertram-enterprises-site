@@ -1,10 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a1628;
-  --color-foreground: #ededed;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #080f1a;
+  --color-foreground: #e8e4df;
+  --color-accent: #c9a84c;
+  --color-accent-dim: rgba(201, 168, 76, 0.15);
+  --color-surface: #0d1520;
+  --color-surface-raised: #111c2b;
+  --color-muted: #6b7a8d;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +22,45 @@ body {
   color: var(--color-foreground);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Noise texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
+
+/* Subtle selection color */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
